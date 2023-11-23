@@ -127,7 +127,7 @@ Please write your answers here
 8. - a. Paging
 9. - d. Both b and c
 10. - b. No
-Bonus 11. - c. MIT
+11. - c. MIT
 
 12. In XV6, a process can be in one of the following states:
 UNUSED: The process is not in use.
