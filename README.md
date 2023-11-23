@@ -117,3 +117,60 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 
 ## Answers
 Please write your answers here
+1. - b. A Unix-like operating system
+2. - c. BSD
+3. - d. simple
+4. - b. As interrupts
+5. - a. 128
+6. - c. Sh
+7. - a. Round-robin scheduling
+8. - a. Paging
+9. - d. Both b and c
+10. - b. No
+Bonus 11. - c. MIT
+
+12. In XV6, a process can be in one of the following states:
+UNUSED: The process is not in use.
+EMBRYO: The process is being created.
+SLEEPING: The process is waiting for an event to occur.
+RUNNABLE: The process is ready to run but is waiting for the CPU.
+RUNNING: The process is currently executing on the CPU.
+ZOMBIE: The process has finished execution, but the parent has not yet collected its exit status.
+
+13. File System Structure in XV6:
+    Superblock: Metadata about file system, size, and key structural information.
+    Inode Table: Stores metadata about files, permissions, and data block pointers.
+    Data Blocks: Actual storage of file contents, referenced by inode pointers.
+    Directory Entries: Associates filenames with corresponding inode numbers in directories.
+    Bitmaps: Track allocation status of inodes and data blocks.
+    
+15. System Calls vs. Library Functions:
+System Calls: These are functions provided by the operating system to interact with its services. Examples in XV6 include fork(), exec(), and exit().
+Library Functions: These are higher-level functions provided by libraries and executed in user space. They often utilize system calls. Examples in XV6 include printf() from the C library.
+
+16. Memory Paging in XV6:
+XV6 uses a paging mechanism where the virtual memory is divided into fixed-size pages.
+Paging allows for efficient use of physical memory and facilitates memory protection.
+It provides a mapping between virtual addresses used by a program and physical addresses in RAM.
+
+17. Shell Commands in XV6:
+ls: Lists directory contents.
+cd: Changes the current directory.
+cp: Copies files or directories.
+
+18. Process Synchronization in XV6:
+Process synchronization is crucial for coordinating the execution of multiple processes.
+Mechanisms such as locks and semaphores are used to control access to shared resources and prevent conflicts.
+
+19. Interrupt Handling in XV6:
+Interrupts in XV6 are handled by interrupt service routines (ISRs).
+They are significant for responding to events like hardware interrupts and ensuring the proper functioning of the system.
+
+20. Virtual Memory in XV6:
+Virtual memory allows the execution of processes as if they have more physical memory than is actually available.
+In XV6, this is achieved through demand paging, where pages are brought into memory only when needed.
+
+21. Boot Process in XV6:
+The boot process involves loading the boot loader, which then loads the XV6 kernel into memory.
+The kernel initializes the system, sets up essential data structures, and transfers control to the main() function.
+The system then begins executing user processes.
